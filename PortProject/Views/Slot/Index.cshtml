@@ -1,0 +1,68 @@
+﻿@model IEnumerable<PortProject.Models.PortSlot>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Slotid)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Ruid)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Sluid)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Startdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enddate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slotid)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Ruid)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Sluid)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Startdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enddate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
